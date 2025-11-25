@@ -7,7 +7,7 @@ export const getCourseRecommendations = async (query: string): Promise<Course[]>
   try {
     const response = await ai.models.generateContent({
       model: "gemini-2.5-flash",
-      contents: `Recomienda 4 cursos en línea realistas disponibles en una plataforma como Coursera basados en la búsqueda del usuario: "${query}".
+      contents: `Recomienda 4 cursos en línea realistas disponibles en una plataforma como MenteLab basados en la búsqueda del usuario: "${query}".
       Si la búsqueda está vacía o es genérica, devuelve 4 cursos populares de tecnología/negocios.
       Asegúrate de que los nombres de los socios sean universidades prestigiosas o grandes empresas tecnológicas (ej. Google, Yale, IBM, Meta).
       Usa calificaciones realistas (4.5-4.9) y conteo de estudiantes (ej. "1.2m").

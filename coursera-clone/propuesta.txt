@@ -1,0 +1,56 @@
+Opción A: Contraste Energético (Para Botones de Acción / CTA)
+El azul de Coursera es frío. Para botones de "Suscribirse" o "Empezar" que necesiten resaltar mucho, lo mejor es usar su color complementario (naranjas/amarillos).
+
+Botón de Acción (Call to Action):
+
+HEX: #FF9900 (Naranja Dorado)
+
+RGB: (255, 153, 0)
+
+Uso: Ideal para botones de compra o inscripción, contrasta perfecto sobre el azul o blanco.
+
+Acento Secundario:
+
+HEX: #F2D049 (Amarillo Mostaza suave)
+
+RGB: (242, 208, 73)
+
+Uso: Iconos, insignias de "Nuevo" o subrayados.
+
+Opción B: Armonía Profesional (Monocromática)
+Si prefieres que la página se vea seria y corporativa, usa variantes del mismo tono azul.
+
+Botón Secundario / Hover:
+
+HEX: #00419E (Azul Oscuro Profundo)
+
+RGB: (0, 65, 158)
+
+Uso: Color al pasar el mouse sobre el botón principal o para pie de página (footer).
+
+Fondo de Secciones (Alternativo al blanco):
+
+HEX: #F5F7FA (Gris Azulado muy claro)
+
+RGB: (245, 247, 250)
+
+Uso: Para diferenciar bloques de contenido o tarjetas de cursos sin usar gris aburrido.
+
+Opción C: Moderno y Creativo
+Coursera a veces utiliza colores secundarios en sus gráficos para dar diversidad.
+
+Componentes Destacados:
+
+HEX: #2A73CC (Azul "Mariner" - más claro y vibrante)
+
+RGB: (42, 115, 204)
+
+Uso: Enlaces o botones de menor jerarquía.
+
+Detalles / Bordes:
+
+HEX: #6D7D8B (Gris Pizarra)
+
+RGB: (109, 125, 139)
+
+Uso: Texto secundario (fechas, autores) o bordes de tarjetas.

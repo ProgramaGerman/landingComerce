@@ -33,20 +33,20 @@ const CourseRecommender: React.FC = () => {
   }, []);
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-mentelab-background">
       <div className="max-w-[1440px] mx-auto px-4 lg:px-8">
         
         <div className="flex flex-col md:flex-row items-start md:items-end justify-between mb-10 gap-6">
           <div>
-            <div className="flex items-center gap-2 mb-2 text-coursera-blue font-bold uppercase tracking-wider text-xs">
+            <div className="flex items-center gap-2 mb-2 text-mentelab-primary font-bold uppercase tracking-wider text-xs">
               <Sparkles size={16} />
               <span>Descubrimiento con IA</span>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 font-display mb-3">
+            <h2 className="text-3xl md:text-4xl font-bold text-mentelab-text font-display mb-3">
               Encuentra el curso perfecto para ti
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl">
-              ¿No estás seguro de por dónde empezar? Dile a nuestra IA qué te interesa y curaremos una ruta de aprendizaje personalizada incluida en Coursera Plus.
+            <p className="text-lg text-mentelab-text max-w-2xl">
+              ¿No estás seguro de por dónde empezar? Dile a nuestra IA qué te interesa y curaremos una ruta de aprendizaje personalizada incluida en MenteLab Plus.
             </p>
           </div>
 
@@ -56,12 +56,12 @@ const CourseRecommender: React.FC = () => {
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder="ej., Quiero aprender Gestión de Productos"
-              className="w-full pl-4 pr-14 py-3 border border-gray-300 rounded shadow-sm focus:ring-2 focus:ring-coursera-blue focus:border-transparent transition-all"
+              className="w-full pl-4 pr-14 py-3 border border-gray-300 rounded shadow-sm focus:ring-2 focus:ring-mentelab-primary focus:border-transparent transition-all"
             />
             <button 
               type="submit"
               disabled={status === LoadingState.LOADING}
-              className="absolute right-2 top-2 bg-coursera-blue text-white p-1.5 rounded hover:bg-blue-800 transition disabled:opacity-70"
+              className="absolute right-2 top-2 bg-mentelab-primary text-white p-1.5 rounded hover:bg-mentelab-dark transition disabled:opacity-70"
             >
               {status === LoadingState.LOADING ? <Loader2 className="animate-spin" size={20} /> : <Search size={20} />}
             </button>
@@ -87,7 +87,7 @@ const CourseRecommender: React.FC = () => {
         </div>
 
         <div className="mt-12 text-center">
-          <button className="inline-flex items-center gap-2 text-coursera-blue font-bold border border-coursera-blue px-8 py-3 rounded hover:bg-blue-50 transition">
+          <button className="inline-flex items-center gap-2 text-mentelab-primary font-bold border border-mentelab-primary px-8 py-3 rounded hover:bg-mentelab-light transition">
             Explorar los más de 7,000 cursos <ArrowRight size={18} />
           </button>
         </div>

@@ -26,21 +26,21 @@ const Features: React.FC = () => {
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-mentelab-background">
       <div className="max-w-[1440px] mx-auto px-4 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">¿Por qué Coursera Plus?</h2>
-          <div className="w-20 h-1 bg-coursera-blue mx-auto rounded-full"></div>
+          <h2 className="text-3xl font-bold text-mentelab-text mb-4">¿Por qué MenteLab Plus?</h2>
+          <div className="w-20 h-1 bg-mentelab-primary mx-auto rounded-full"></div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {features.map((feature, index) => (
             <div key={index} className="flex flex-col items-center text-center group">
-              <div className="bg-blue-50 text-coursera-blue p-4 rounded-full mb-6 group-hover:bg-coursera-blue group-hover:text-white transition-colors duration-300">
+              <div className="bg-mentelab-light text-mentelab-primary p-4 rounded-full mb-6 group-hover:bg-mentelab-primary group-hover:text-white transition-colors duration-300">
                 {feature.icon}
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
-              <p className="text-gray-600 leading-relaxed">{feature.desc}</p>
+              <h3 className="text-xl font-bold text-mentelab-text mb-3">{feature.title}</h3>
+              <p className="text-mentelab-text leading-relaxed">{feature.desc}</p>
             </div>
           ))}
         </div>
