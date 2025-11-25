@@ -5,11 +5,11 @@ const Partners: React.FC = () => {
   const partners = [
     { name: 'Illinois', font: 'font-serif' },
     { name: 'Duke', font: 'font-serif' },
-    { name: 'Google', font: 'font-sans' },
-    { name: 'IBM', font: 'font-mono' },
     { name: 'Stanford', font: 'font-serif' },
-    { name: 'Vanderbilt', font: 'font-serif' },
-    { name: 'Meta', font: 'font-sans' },
+    { name: 'MIT', font: 'font-serif' },
+    { name: 'Harvard', font: 'font-serif' },
+    { name: 'Yale', font: 'font-serif' },
+    { name: 'Princeton', font: 'font-serif' },
     { name: 'Penn', font: 'font-serif' },
   ];
 
@@ -17,7 +17,7 @@ const Partners: React.FC = () => {
     <div className="bg-[#f5f5f5] py-8 border-b border-gray-200">
       <div className="max-w-[1440px] mx-auto px-4 lg:px-8 text-center">
         <p className="text-sm font-semibold text-gray-600 mb-6 tracking-wide uppercase">
-          Lanza tu carrera con certificados de más de 325 universidades y empresas de clase mundial
+          Universidades de prestigio con capacidades de ofrecer cursos de alta calidad
         </p>
         <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
           {partners.map((p, i) => (
