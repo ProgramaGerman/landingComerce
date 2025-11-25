@@ -6,30 +6,16 @@ const Header: React.FC = () => {
 
   return (
     <header className="sticky top-0 z-50 bg-mentelab-background border-b border-gray-200 shadow-sm font-sans">
-      <div className="max-w-[1440px] mx-auto px-4 lg:px-8 h-16 flex items-center justify-between">
-        
+      <div className="max-w-[1440px] mx-auto px-4 lg:px-8 h-16 flex items-center justify-evenly">
+
         {/* Logo & Explore */}
         <div className="flex items-center gap-6">
           <div className="text-mentelab-primary font-bold text-2xl tracking-tight cursor-pointer">
             Mentelab
           </div>
-          <button className="hidden md:flex items-center gap-1 bg-mentelab-primary text-white px-4 py-2 rounded-[4px] text-sm font-semibold hover:bg-mentelab-dark transition">
-            Explorar
-            <ChevronDown size={16} />
-          </button>
         </div>
 
-        {/* Search Bar (Desktop) */}
-        <div className="hidden lg:flex flex-1 max-w-xl mx-6 relative">
-          <input 
-            type="text" 
-            placeholder="¿Qué quieres aprender?" 
-            className="w-full border border-gray-300 rounded-full py-2.5 pl-4 pr-12 text-sm text-mentelab-text focus:outline-none focus:border-mentelab-primary shadow-inner"
-          />
-          <div className="absolute right-1 top-1 bg-mentelab-primary p-1.5 rounded-full text-white cursor-pointer">
-            <Search size={18} />
-          </div>
-        </div>
+
 
         {/* Right Actions */}
         <div className="hidden md:flex items-center gap-6 text-sm text-mentelab-text">
@@ -42,7 +28,7 @@ const Header: React.FC = () => {
         </div>
 
         {/* Mobile Menu Button */}
-        <button 
+        <button
           className="md:hidden text-mentelab-text"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
@@ -53,9 +39,9 @@ const Header: React.FC = () => {
       {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="md:hidden absolute top-16 left-0 w-full bg-mentelab-background border-b border-gray-200 p-4 flex flex-col gap-4 shadow-lg">
-          <input 
-            type="text" 
-            placeholder="¿Qué quieres aprender?" 
+          <input
+            type="text"
+            placeholder="¿Qué quieres aprender?"
             className="w-full border border-gray-300 rounded-[4px] py-2 px-3 text-sm"
           />
           <hr />
