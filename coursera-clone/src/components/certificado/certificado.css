@@ -1,0 +1,314 @@
+/* Dialog Base Styles */
+.certificado-dialog {
+    border: none;
+    border-radius: 1rem;
+    padding: 0;
+    max-width: 800px;
+    width: 90vw;
+    max-height: 85vh;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    background: transparent;
+    
+    /* Centrado perfecto */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+}
+
+.certificado-dialog::backdrop {
+    background: rgba(17, 33, 128, 0.75);
+    backdrop-filter: blur(8px);
+}
+
+/* Content Container */
+.certificado-content {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+/* Header */
+.certificado-header {
+    position: relative;
+    background: linear-gradient(135deg, #2F93D6 0%, #112180 100%);
+    padding: 2.5rem 2rem;
+    text-align: center;
+    color: white;
+}
+
+.header-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.certificado-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+    letter-spacing: -0.025em;
+}
+
+.certificado-subtitle {
+    font-size: 1.125rem;
+    margin: 0;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+.close-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 0.5rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.close-button:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+}
+
+/* Body */
+.certificado-body {
+    padding: 2rem;
+    max-height: calc(85vh - 200px);
+    overflow-y: auto;
+}
+
+/* Scrollbar Styling */
+.certificado-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+.certificado-body::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.certificado-body::-webkit-scrollbar-thumb {
+    background: #2F93D6;
+    border-radius: 10px;
+}
+
+.certificado-body::-webkit-scrollbar-thumb:hover {
+    background: #112180;
+}
+
+/* Sections */
+.section {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.section-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, rgba(47, 147, 214, 0.1) 0%, rgba(17, 33, 128, 0.05) 100%);
+    border-radius: 12px;
+    margin-bottom: 1rem;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #112180;
+    margin: 0 0 1rem 0;
+}
+
+.section-text {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #4b5563;
+    margin: 0;
+}
+
+/* Benefits Grid */
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    background: linear-gradient(135deg, rgba(47, 147, 214, 0.05) 0%, rgba(17, 33, 128, 0.02) 100%);
+    border-radius: 0.75rem;
+    border: 1px solid rgba(47, 147, 214, 0.1);
+    transition: all 0.3s ease;
+}
+
+.benefit-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(47, 147, 214, 0.15);
+    border-color: rgba(47, 147, 214, 0.3);
+}
+
+.benefit-item span {
+    font-size: 0.95rem;
+    color: #1f2937;
+    font-weight: 500;
+}
+
+/* Principles List */
+.principles-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.principle-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.25rem;
+    background: white;
+    border-radius: 0.75rem;
+    border: 1px solid #e5e7eb;
+    transition: all 0.3s ease;
+}
+
+.principle-item:hover {
+    border-color: #2F93D6;
+    box-shadow: 0 4px 12px rgba(47, 147, 214, 0.1);
+    transform: translateX(4px);
+}
+
+.principle-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    background: linear-gradient(135deg, #2F93D6 0%, #112180 100%);
+    color: white;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 1.125rem;
+}
+
+.principle-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #112180;
+    margin: 0 0 0.25rem 0;
+}
+
+.principle-text {
+    font-size: 0.95rem;
+    color: #6b7280;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Certification Badge */
+.certification-badge {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, rgba(47, 147, 214, 0.1) 0%, rgba(17, 33, 128, 0.05) 100%);
+    border-radius: 1rem;
+    border: 2px solid rgba(47, 147, 214, 0.2);
+    margin-top: 2rem;
+}
+
+.badge-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #112180;
+    margin: 0 0 0.25rem 0;
+}
+
+.badge-text {
+    font-size: 1rem;
+    color: #2F93D6;
+    font-weight: 600;
+    margin: 0 0 0.25rem 0;
+}
+
+.badge-date {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .certificado-dialog {
+        width: 95vw;
+        max-height: 90vh;
+    }
+
+    .certificado-title {
+        font-size: 1.5rem;
+    }
+
+    .certificado-header {
+        padding: 2rem 1.5rem;
+    }
+
+    .certificado-body {
+        padding: 1.5rem;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .certification-badge {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Animation */
+.certificado-dialog[open] {
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}

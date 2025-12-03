@@ -1,45 +1,76 @@
-import React from 'react';
-import { Star } from 'lucide-react';
-import { Course } from '../types';
+import { Users, ThumbsUp, ShoppingCart } from "lucide-react";
+import { Button } from "./ui/Button";
+import { Badge } from "./ui/Badge";
+import { motion } from "framer-motion";
+import { Course } from "../lib/data";
 
 interface CourseCardProps {
   course: Course;
 }
 
-const CourseCard: React.FC<CourseCardProps> = ({ course }) => {
+export function CourseCard({ course }: CourseCardProps) {
   return (
-    <div className="group bg-mentelab-background border border-gray-200 rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 h-full flex flex-col cursor-pointer">
-      <div className="relative h-40 overflow-hidden">
-        <img 
-          src={course.imageUrl} 
-          alt={course.title} 
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+    <motion.article
+      className="group bg-card rounded-lg overflow-hidden border border-border hover:shadow-lg transition-shadow h-full flex flex-col"
+      whileHover={{ y: -8 }}
+      transition={{ duration: 0.3, ease: "easeOut" }}
+    >
+      {/* Imagen del curso - altura fija */}
+      <a href={`/curso/${course.id}`} className="block relative aspect-video overflow-hidden flex-shrink-0">
+        {course.badge && (
+          <Badge className="absolute top-3 left-3 z-10 bg-primary text-primary-foreground">{course.badge}</Badge>
+        )}
+        <motion.img
+          src={course.image || "/placeholder.svg"}
+          alt={course.title}
+          className="w-full h-full object-cover"
+          whileHover={{ scale: 1.05 }}
+          transition={{ duration: 0.4 }}
         />
-        <div className="absolute top-2 right-2 bg-mentelab-background/90 px-2 py-1 rounded text-xs font-bold uppercase tracking-wide shadow-sm text-mentelab-text">
-          {course.level}
-        </div>
-      </div>
-      <div className="p-4 flex flex-col flex-grow">
-        <div className="flex items-center gap-2 mb-2">
-           <img src={`https://ui-avatars.com/api/?name=${course.partner}&background=random&size=24`} className="w-6 h-6 rounded-sm" alt="partner logo" />
-           <span className="text-xs font-semibold text-mentelab-text truncate">{course.partner}</span>
-        </div>
-        <h3 className="font-bold text-mentelab-text mb-1 line-clamp-2 group-hover:text-mentelab-primary transition-colors">
-          {course.title}
-        </h3>
-        <p className="text-sm text-mentelab-text mb-3">{course.certificateType}</p>
-        
-        <div className="mt-auto flex items-center gap-2 text-sm">
-          <div className="flex items-center text-yellow-500 font-bold">
-            <span className="mr-1">{course.rating}</span>
-            <Star size={14} fill="currentColor" />
-          </div>
-          <span className="text-mentelab-text text-xs">|</span>
-          <span className="text-mentelab-text text-xs">{course.students} Estudiantes</span>
-        </div>
-      </div>
-    </div>
-  );
-};
+      </a>
 
-export default CourseCard;
+      {/* Contenido - flex para distribuir espacio */}
+      <div className="p-4 flex flex-col flex-1">
+        {/* Información del curso - ocupa el espacio disponible */}
+        <div className="flex-1 space-y-3">
+          <a href={`/curso/${course.id}`}>
+            <h3 className="font-semibold line-clamp-2 group-hover:text-primary transition-colors min-h-[3rem]">
+              {course.title}
+            </h3>
+          </a>
+          <p className="text-sm text-muted-foreground line-clamp-1">
+            Un curso de {course.instructor}
+          </p>
+          <p className="text-sm text-muted-foreground line-clamp-2">
+            {course.description}
+          </p>
+        </div>
+
+        {/* Estadísticas - altura fija */}
+        <div className="flex items-center gap-4 text-xs text-muted-foreground py-3">
+          <div className="flex items-center gap-1">
+            <Users className="w-3 h-3" />
+            <span>{course.students.toLocaleString()}</span>
+          </div>
+          <div className="flex items-center gap-1">
+            <ThumbsUp className="w-3 h-3" />
+            <span>
+              {course.rating}% ({(course.reviews / 1000).toFixed(1)}K)
+            </span>
+          </div>
+        </div>
+
+        {/* Botón - siempre al final */}
+        <a href={`/curso/${course.id}`} className="block mt-auto">
+          <Button
+            variant="outline"
+            className="w-full group-hover:bg-primary group-hover:text-primary-foreground group-hover:border-primary transition-colors bg-transparent"
+          >
+            <ShoppingCart className="w-4 h-4 mr-2" />
+            Ver Más
+          </Button>
+        </a>
+      </div>
+    </motion.article>
+  );
+}

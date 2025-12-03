@@ -1,68 +1,155 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  /* Nueva paleta de colores NextLevel */
+  --primary: #2F93D6;
+  /* Azul principal */
+  --secondary: #CFCFCF;
+  /* Gris claro */
+  --dark: #112180;
+  /* Azul oscuro */
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  /* Colores derivados para el sistema */
+  --background: #242323;
+  --foreground: #FFFFFF;
+  --card: #FFFFFF;
+  --card-foreground: #112180;
+  --popover: #FFFFFF;
+  --popover-foreground: #112180;
+  --primary-foreground: #FFFFFF;
+  --secondary-foreground: #112180;
+  --muted: #F5F5F5;
+  --muted-foreground: #6B7280;
+  --accent: #2F93D6;
+  --accent-foreground: #FFFFFF;
+  --destructive: #EF4444;
+  --destructive-foreground: #FFFFFF;
+  --border: #E5E7EB;
+  --input: #E5E7EB;
+  --ring: #2F93D6;
+  --radius: 0.5rem;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.dark {
+  --background: #0F172A;
+  --foreground: #F1F5F9;
+  --card: #1E293B;
+  --card-foreground: #F1F5F9;
+  --popover: #1E293B;
+  --popover-foreground: #F1F5F9;
+  --muted: #334155;
+  --muted-foreground: #94A3B8;
+  --border: #334155;
+  --input: #334155;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+@theme inline {
+  --font-sans: "Inter", "Inter Fallback", sans-serif;
+
+  /* Colores del sistema - usando valores directos */
+  --color-background: #242323;
+  --color-foreground: #FFFFFF;
+  --color-card: #2D2D2D;
+  --color-card-foreground: #FFFFFF;
+  --color-popover: #FFFFFF;
+  --color-popover-foreground: #112180;
+  --color-primary: #2F93D6;
+  --color-primary-foreground: #FFFFFF;
+  --color-secondary: #CFCFCF;
+  --color-secondary-foreground: #112180;
+  --color-muted: #F5F5F5;
+  --color-muted-foreground: #6B7280;
+  --color-accent: #2F93D6;
+  --color-accent-foreground: #FFFFFF;
+  --color-destructive: #EF4444;
+  --color-destructive-foreground: #FFFFFF;
+  --color-border: #E5E7EB;
+  --color-input: #E5E7EB;
+  --color-ring: #2F93D6;
+  --color-dark: #112180;
+
+  /* Radios */
+  --radius-sm: calc(0.5rem - 4px);
+  --radius-md: calc(0.5rem - 2px);
+  --radius-lg: 0.5rem;
+  --radius-xl: calc(0.5rem + 4px);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
   }
-  a:hover {
-    color: #747bff;
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
   }
-  button {
-    background-color: #f9f9f9;
+
+  /* Smooth scroll */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Optimización de rendimiento para animaciones */
+  @media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer utilities {
+
+  /* Gradientes personalizados con la paleta */
+  .gradient-primary {
+    background: linear-gradient(135deg, #2F93D6 0%, #112180 100%);
+  }
+
+  .gradient-secondary {
+    background: linear-gradient(135deg, #CFCFCF 0%, #F5F5F5 100%);
+  }
+
+  /* Color dark como utilidad */
+  .bg-dark {
+    background-color: #112180;
+  }
+
+  .text-dark {
+    color: #112180;
+  }
+
+  .border-dark {
+    border-color: #112180;
+  }
+
+  .from-dark {
+    --tw-gradient-from: #112180;
+    --tw-gradient-to: rgb(17 33 128 / 0);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  }
+
+  .via-dark {
+    --tw-gradient-to: rgb(17 33 128 / 0);
+    --tw-gradient-stops: var(--tw-gradient-from), #112180, var(--tw-gradient-to);
+  }
+
+  .to-dark {
+    --tw-gradient-to: #112180;
+  }
+
+  /* Efectos de hover optimizados */
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(47, 147, 214, 0.2);
   }
 }

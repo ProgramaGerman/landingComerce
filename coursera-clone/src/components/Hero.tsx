@@ -1,68 +1,171 @@
-import React from 'react';
-import { CheckCircle } from 'lucide-react';
+import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
+import { Button } from "./ui/Button";
 
-const Hero: React.FC = () => {
+export default function Hero() {
+  const scrollToContact = () => {
+    const element = document.getElementById("contact");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <section className="relative bg-mentelab-light overflow-hidden">
-      <div className="max-w-[1440px] mx-auto px-4 lg:px-8 py-12 lg:py-20 flex flex-col lg:flex-row items-center">
-        
-        {/* Text Content */}
-        <div className="w-full lg:w-1/2 z-10 mb-10 lg:mb-0">
-          <h1 className="text-4xl lg:text-6xl font-bold text-mentelab-text leading-tight mb-6 font-display">
-            Acceso ilimitado a <br/>
-            <span className="text-mentelab-primary">más de 7,000 cursos de clase mundial</span>
-          </h1>
-          <p className="text-lg lg:text-xl text-mentelab-text mb-8 max-w-lg leading-relaxed">
-            Invierte en tus objetivos profesionales con MenteLab Plus. Obtén acceso ilimitado a más del 90% de cursos, Proyectos, Especializaciones y Certificados Profesionales.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 mb-6">
-            <button className="bg-mentelab-primary text-white text-lg font-bold px-8 py-4 rounded-[4px] shadow hover:bg-mentelab-dark transition transform hover:-translate-y-0.5">
-              Prueba Gratis de 7 Días
-            </button>
-            <button className="bg-mentelab-background text-mentelab-primary border border-mentelab-primary text-lg font-bold px-8 py-4 rounded-[4px] hover:bg-mentelab-light transition">
-              Ver Todos los Planes
-            </button>
-          </div>
-
-          <div className="space-y-3 mt-8">
-            <div className="flex items-center gap-3 text-mentelab-text font-medium">
-              <CheckCircle size={20} className="text-mentelab-secondary" />
-              <span>Obtén certificados ilimitados</span>
-            </div>
-            <div className="flex items-center gap-3 text-mentelab-text font-medium">
-              <CheckCircle size={20} className="text-mentelab-secondary" />
-              <span>Aprende a tu propio ritmo</span>
-            </div>
-            <div className="flex items-center gap-3 text-mentelab-text font-medium">
-               <CheckCircle size={20} className="text-mentelab-secondary" />
-               <span>Cancela en cualquier momento</span>
-            </div>
-          </div>
-        </div>
-
-        {/* Hero Image/Graphic */}
-        <div className="w-full lg:w-1/2 relative lg:pl-12">
-          <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl transform rotate-1 hover:rotate-0 transition-transform duration-500 border-4 border-white">
-            <img 
-              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
-              alt="Estudiantes aprendiendo"
-              className="w-full h-auto object-cover"
-            />
-            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
-              <div className="text-white font-bold text-xl">Únete a 77 millones de estudiantes</div>
-              <div className="text-white/80 text-sm">Logra tus objetivos con MenteLab Plus</div>
-            </div>
-          </div>
-          
-          {/* Decorative Background Elements */}
-          <div className="absolute top-10 right-10 w-64 h-64 bg-yellow-300 rounded-full opacity-20 blur-3xl -z-10"></div>
-          <div className="absolute bottom-10 left-10 w-72 h-72 bg-mentelab-primary rounded-full opacity-20 blur-3xl -z-10"></div>
-        </div>
-
+    <section id="hero" className="relative min-h-screen flex items-center bg-gradient-to-br from-dark via-dark to-primary/20 overflow-hidden">
+      {/* Efectos de fondo */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-1/4 -left-20 w-96 h-96 bg-primary/20 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
       </div>
+
+      <div className="max-w-7xl mx-auto px-4 py-20 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Contenido */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-white"
+          >
+
+
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="text-5xl lg:text-6xl font-bold mb-6 leading-tight"
+            >
+              Domina el Futuro Digital: Programación, Diseño, IA y más
+            </motion.h1>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="text-xl text-white/80 mb-8 leading-relaxed"
+            >
+              Una Plataforma que te ayuda a dominar el futuro digital, promovemos cursos de programación, diseño de aplicaciones,
+              ingenieria de prompts, aprendizaje automático, estructuracion de proyectos, entre otros.
+
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              className="flex flex-wrap gap-4"
+            >
+              <Button
+                size="lg"
+                onClick={scrollToContact}
+                className="group bg-primary hover:bg-primary/90"
+              >
+                Comenzar Ahora
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                onClick={() => {
+                  const element = document.getElementById("features");
+                  if (element) element.scrollIntoView({ behavior: "smooth" });
+                }}
+                className="border-white/30 text-white hover:bg-white/10"
+              >
+                Conocer Más
+              </Button>
+            </motion.div>
+
+            {/* Stats rápidos */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              className="mt-12 grid grid-cols-3 gap-6"
+            >
+              <div className="flex flex-col items-center justify-center">
+                <div className="text-3xl font-bold text-primary">24/7</div>
+                <div className="text-sm text-white/60">Soporte</div>
+              </div>
+            </motion.div>
+          </motion.div>
+
+          {/* Imagen/Gráfico decorativo */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="relative hidden lg:block"
+          >
+
+
+            <div className="relative w-full h-[500px]">
+              {/* Círculos decorativos */}
+              <motion.div
+                animate={{
+                  y: [0, -20, 0],
+                  rotate: [0, 5, 0]
+                }}
+                transition={{
+                  duration: 6,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+                className="absolute top-0 right-0 w-64 h-64 bg-primary/30 rounded-full blur-2xl"
+              />
+              <motion.div
+                animate={{
+                  y: [0, 20, 0],
+                  rotate: [0, -5, 0]
+                }}
+                transition={{
+                  duration: 8,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+                className="absolute bottom-0 left-0 w-80 h-80 bg-primary/20 rounded-full blur-3xl"
+              />
+
+              {/* Elemento central */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <motion.div
+                  animate={{
+                    scale: [1, 1.05, 1],
+                  }}
+                  transition={{
+                    duration: 4,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                  className="w-96 h-96 rounded-2xl bg-gradient-to-br from-primary/40 to-transparent backdrop-blur-sm border border-primary/30 flex items-center justify-center"
+                >
+                  <img
+                    src="/src/assets/LogoV2.svg"
+                    alt="NextLevel Logo"
+                    className="w-240 h-240 object-contain"
+                  />
+                </motion.div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Indicador de scroll */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.6, delay: 1 }}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2"
+      >
+        <motion.div
+          animate={{ y: [0, 10, 0] }}
+          transition={{ duration: 2, repeat: Infinity }}
+          className="w-6 h-10 border-2 border-white/30 rounded-full flex items-start justify-center p-2"
+        >
+          <div className="w-1 h-2 bg-white/60 rounded-full" />
+        </motion.div>
+      </motion.div>
     </section>
   );
-};
-
-export default Hero;
+}

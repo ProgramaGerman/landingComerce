@@ -1,65 +1,130 @@
-import React from 'react';
-import { Facebook, Twitter, Linkedin, Instagram, Youtube } from 'lucide-react';
+import logo from "../assets/LogoV2.svg";
+import { Mail, Phone, MapPin } from "lucide-react";
+import { useState } from "react";
+import TerminosCondiciones from "./terminos/terminos";
+import ConstitucionVenezuela from "./constitucion/constitucion";
 
-const Footer: React.FC = () => {
+export default function Footer() {
+  const [isTerminosOpen, setIsTerminosOpen] = useState(false);
+  const [isConstitucionOpen, setIsConstitucionOpen] = useState(false);
+  const currentYear = new Date().getFullYear();
+
   return (
-    <footer className="bg-mentelab-light border-t border-gray-200 pt-16 pb-8 font-sans">
-      <div className="max-w-[1440px] mx-auto px-4 lg:px-8">
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-8 mb-12">
+    <footer className="bg-dark text-white">
+      <div className="max-w-7xl mx-auto px-4 py-12">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+          {/* Logo y descripción */}
           <div>
-            <h4 className="font-bold text-mentelab-text mb-4">MenteLab</h4>
-            <ul className="space-y-2 text-sm text-mentelab-text">
-              <li><a href="#" className="hover:underline">Acerca de</a></li>
-              <li><a href="#" className="hover:underline">Qué Ofrecemos</a></li>
-              <li><a href="#" className="hover:underline">Liderazgo</a></li>
-              <li><a href="#" className="hover:underline">Carreras</a></li>
-              <li><a href="#" className="hover:underline">Catálogo</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="font-bold text-mentelab-text mb-4">Comunidad</h4>
-            <ul className="space-y-2 text-sm text-mentelab-text">
-              <li><a href="#" className="hover:underline">Estudiantes</a></li>
-              <li><a href="#" className="hover:underline">Socios</a></li>
-              <li><a href="#" className="hover:underline">Desarrolladores</a></li>
-              <li><a href="#" className="hover:underline">Probadores Beta</a></li>
-              <li><a href="#" className="hover:underline">Traductores</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="font-bold text-mentelab-text mb-4">Más</h4>
-            <ul className="space-y-2 text-sm text-mentelab-text">
-              <li><a href="#" className="hover:underline">Prensa</a></li>
-              <li><a href="#" className="hover:underline">Inversores</a></li>
-              <li><a href="#" className="hover:underline">Términos</a></li>
-              <li><a href="#" className="hover:underline">Privacidad</a></li>
-              <li><a href="#" className="hover:underline">Ayuda</a></li>
-            </ul>
-          </div>
-           <div>
-            <h4 className="font-bold text-mentelab-text mb-4">Aplicación Móvil</h4>
-            <div className="space-y-3">
-              <img src="https://d3njjcbhbojbot.cloudfront.net/web/images/icons/download_on_the_app_store_badge_en.svg" alt="App Store" className="h-10 cursor-pointer" />
-              <img src="https://d3njjcbhbojbot.cloudfront.net/web/images/icons/en_generic_rgb_wo_45.png" alt="Google Play" className="h-10 cursor-pointer" />
+            <div className="flex items-center gap-2 mb-4">
+              <div className="w-40 h-40 bg-gray rounded-full border-2 border-white flex items-center justify-center p-2">
+                <img src={logo} alt="Logo" className="w-40 h-40 object-contain" />
+              </div>
+              <span className="font-bold text-lg">NextLevel</span>
             </div>
+            <p className="text-sm text-white/70">
+              Transformando negocios con tecnología innovadora y soluciones de primer nivel.
+            </p>
+          </div>
+
+          {/* Enlaces rápidos */}
+          <div>
+            <h3 className="font-semibold mb-4 text-primary">Enlaces Rápidos</h3>
+            <ul className="space-y-2">
+              <li>
+                <a href="#hero" className="text-sm text-white/70 hover:text-primary transition-colors">
+                  Inicio
+                </a>
+              </li>
+              <li>
+                <a href="#features" className="text-sm text-white/70 hover:text-primary transition-colors">
+                  Características
+                </a>
+              </li>
+              <li>
+                <a href="#trust" className="text-sm text-white/70 hover:text-primary transition-colors">
+                  Confiabilidad
+                </a>
+              </li>
+              <li>
+                <a href="#contact" className="text-sm text-white/70 hover:text-primary transition-colors">
+                  Contacto
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Legal */}
+          <div>
+            <h3 className="font-semibold mb-4 text-primary">Legal</h3>
+            <ul className="space-y-2">
+              <li>
+                <button 
+                  onClick={() => setIsTerminosOpen(true)}
+                  className="text-sm text-white/70 hover:text-primary transition-colors bg-transparent border-none cursor-pointer hover:underline"
+                >
+                  Términos y Condiciones
+                </button>
+              </li>
+              <li>
+                <a href="#" className="text-sm text-white/70 hover:text-primary transition-colors">
+                  Política de Privacidad
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-sm text-white/70 hover:text-primary transition-colors">
+                  Cookies
+                </a>
+              </li>
+              <li>
+                <button 
+                  onClick={() => setIsConstitucionOpen(true)}
+                  className="text-sm text-white/70 hover:text-primary transition-colors bg-transparent border-none cursor-pointer hover:underline"
+                >
+                  Constitución CRBV
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          {/* Contacto */}
+          <div>
+            <h3 className="font-semibold mb-4 text-primary">Contacto</h3>
+            <ul className="space-y-3">
+              <li className="flex items-center gap-2 text-sm text-white/70">
+                <Mail className="w-4 h-4 text-primary" />
+                contacto@nextlevel.com
+              </li>
+              <li className="flex items-center gap-2 text-sm text-white/70">
+                <Phone className="w-4 h-4 text-primary" />
+                +58 (41x) xxx-xxx
+              </li>
+              <li className="flex items-center gap-2 text-sm text-white/70">
+                <MapPin className="w-4 h-4 text-primary" />
+                Porlamar, Venezuela
+              </li>
+            </ul>
           </div>
         </div>
 
-        <hr className="border-gray-300 mb-8" />
-
-        <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-          <span className="text-sm text-mentelab-text">© 2025 MenteLab Inc. Todos los derechos reservados.</span>
-          <div className="flex gap-4 text-mentelab-text">
-            <Facebook size={20} className="cursor-pointer hover:text-mentelab-primary" />
-            <Linkedin size={20} className="cursor-pointer hover:text-mentelab-primary" />
-            <Twitter size={20} className="cursor-pointer hover:text-mentelab-primary" />
-            <Youtube size={20} className="cursor-pointer hover:text-mentelab-primary" />
-            <Instagram size={20} className="cursor-pointer hover:text-mentelab-primary" />
-          </div>
+        {/* Copyright */}
+        <div className="border-t border-white/10 pt-8 text-center">
+          <p className="text-sm text-white/60">
+            © {currentYear} NextLevel. Todos los derechos reservados.
+          </p>
         </div>
       </div>
+
+      {/* Dialog de Términos y Condiciones */}
+      <TerminosCondiciones 
+        isOpen={isTerminosOpen} 
+        onClose={() => setIsTerminosOpen(false)} 
+      />
+
+      {/* Dialog de Constitución */}
+      <ConstitucionVenezuela 
+        isOpen={isConstitucionOpen} 
+        onClose={() => setIsConstitucionOpen(false)} 
+      />
     </footer>
   );
-};
-
-export default Footer;
+}
