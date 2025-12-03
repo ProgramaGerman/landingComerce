@@ -11,7 +11,7 @@ export default function Hero() {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center bg-gradient-to-br from-dark via-dark to-primary/20 overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex items-center bg-black/5 bg-cover bg-center overflow-hidden">
       {/* Efectos de fondo */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 -left-20 w-96 h-96 bg-primary/20 rounded-full blur-3xl" />
@@ -25,7 +25,7 @@ export default function Hero() {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-white"
+            className="text-white relative"
           >
 
 
@@ -33,7 +33,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="text-5xl lg:text-6xl font-bold mb-6 leading-tight"
+              className="text-5xl lg:text-6xl rounded-2xl p-4 text-white font-bold mb-6 leading-tight"
             >
               Domina el Futuro Digital: Programación, Diseño, IA y más
               <br />
@@ -43,9 +43,8 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="text-xl text-white/80 mb-8 leading-relaxed"
+              className="text-xl rounded-2xl text-white mb-8 leading-relaxed"
             >
-              <br />
               Una Plataforma que te ayuda a dominar el futuro digital, promovemos cursos de programación, diseño de aplicaciones,
               ingenieria de prompts, aprendizaje automático, estructuracion de proyectos, entre otros.
 
@@ -139,7 +138,7 @@ export default function Hero() {
                     repeat: Infinity,
                     ease: "easeInOut"
                   }}
-                  className="w-96 h-96 rounded-2xl bg-gradient-to-br from-primary/40 to-transparent backdrop-blur-sm border border-primary/30 flex items-center justify-center"
+                  className="w-96 h-96 rounded-2xl bg-white backdrop-blur-sm border border-primary/30 shadow-2xl flex items-center justify-center"
                 >
                   <div className="flex flex-col items-center justify-center">
                     <img
@@ -157,6 +156,8 @@ export default function Hero() {
           </motion.div>
         </div>
       </div>
+
+
 
       {/* Indicador de scroll */}
       <motion.div
