@@ -34,7 +34,7 @@ export default function Features() {
             Características Principales
           </h2>
           <p className="text-lg color-white max-w-2xl mx-auto">
-            Descubre por qué NextLevel es la mejor opción para tu negocio
+            Descubre por qué NextLevelAcademy es la mejor opción para tu negocio
           </p>
         </div>
 

@@ -36,6 +36,7 @@ export default function Hero() {
               className="text-5xl lg:text-6xl font-bold mb-6 leading-tight"
             >
               Domina el Futuro Digital: Programación, Diseño, IA y más
+              <br />
             </motion.h1>
 
             <motion.p
@@ -44,6 +45,11 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="text-xl text-white/80 mb-8 leading-relaxed"
             >
+              <div className="flex justify-center ">
+                <strong className="text-primary text-4xl">NextLevelAcademy</strong>
+                <br /><br />
+              </div>
+              <br />
               Una Plataforma que te ayuda a dominar el futuro digital, promovemos cursos de programación, diseño de aplicaciones,
               ingenieria de prompts, aprendizaje automático, estructuracion de proyectos, entre otros.
 
