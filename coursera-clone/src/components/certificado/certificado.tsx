@@ -172,7 +172,7 @@ function Certificado({ isOpen, onClose }: CertificadoProps) {
                         <div>
                             <p className="badge-title">NextLevel Academy</p>
                             <p className="badge-text">Certificado ISO 9001:2015</p>
-                            <p className="badge-date">Vigente desde 2024</p>
+                            <p className="badge-date">Vigente desde 2025</p>
                             
                         </div>
                         <br /><br /><br /><br /><br />

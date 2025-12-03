@@ -52,7 +52,7 @@ function TerminosCondiciones({ isOpen, onClose }: TerminosProps) {
                     </div>
                     <div>
                         <h2 className="terminos-title">Términos y Condiciones</h2>
-                        <p className="terminos-subtitle">Última actualización: Diciembre 2024</p>
+                        <p className="terminos-subtitle">Última actualización: Diciembre 2025</p>
                     </div>
                     <button 
                         onClick={onClose}
