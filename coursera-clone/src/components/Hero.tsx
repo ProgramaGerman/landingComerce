@@ -45,10 +45,6 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="text-xl text-white/80 mb-8 leading-relaxed"
             >
-              <div className="flex justify-center ">
-                <strong className="text-primary text-4xl">NextLevelAcademy</strong>
-                <br /><br />
-              </div>
               <br />
               Una Plataforma que te ayuda a dominar el futuro digital, promovemos cursos de programación, diseño de aplicaciones,
               ingenieria de prompts, aprendizaje automático, estructuracion de proyectos, entre otros.
@@ -145,11 +141,16 @@ export default function Hero() {
                   }}
                   className="w-96 h-96 rounded-2xl bg-gradient-to-br from-primary/40 to-transparent backdrop-blur-sm border border-primary/30 flex items-center justify-center"
                 >
-                  <img
-                    src="/src/assets/LogoV2.svg"
-                    alt="NextLevel Logo"
-                    className="w-240 h-240 object-contain"
-                  />
+                  <div className="flex flex-col items-center justify-center">
+                    <img
+                      src="/src/assets/LogoV2.svg"
+                      alt="NextLevel Logo"
+                      className="w-240 h-240 object-contain"
+                    />
+                    <div className="flex items-center justify-center ">
+                      <strong className="text-primary text-4xl">NextLevelAcademy</strong>
+                    </div>
+                  </div>
                 </motion.div>
               </div>
             </div>
