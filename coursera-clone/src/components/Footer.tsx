@@ -1,4 +1,4 @@
-import logo from "../assets/LogoV2.svg";
+import logo from "../assets/svg/LogoV2.svg";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { useState } from "react";
 import TerminosCondiciones from "./terminos/terminos";

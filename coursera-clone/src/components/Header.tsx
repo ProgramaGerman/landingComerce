@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import logo from "../assets/Logo_Nuevo.svg";
+import logo from "../assets/svg/Logo_Nuevo.svg";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
