@@ -142,7 +142,7 @@ export default function Hero() {
                 >
                   <div className="flex flex-col items-center justify-center">
                     <img
-                      src="/src/assets/svg/LogoV2.svg"
+                      src="/src/assets/svg/prueba.svg"
                       alt="NextLevel Logo"
                       className="w-240 h-240 object-contain"
                     />
