@@ -45,12 +45,12 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#trust" className="text-sm text-white/70 hover:text-primary transition-colors hover:text-blue-500">
+                <a href="#plans" className="text-sm text-white/70 hover:text-primary transition-colors hover:text-blue-500">
                   Planes de Servicio
                 </a>
               </li>
               <li>
-                <a href="#trust" className="text-sm text-white/70 hover:text-primary transition-colors hover:text-blue-500">
+                <a href="#about" className="text-sm text-white/70 hover:text-primary transition-colors hover:text-blue-500">
                   Nosotros
                 </a>
               </li>
