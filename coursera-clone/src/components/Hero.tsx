@@ -1,3 +1,4 @@
+import logo from "../assets/svg/prueba1.svg"; 
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Button } from "./ui/Button";
@@ -59,7 +60,7 @@ export default function Hero() {
               <Button
                 size="lg"
                 onClick={scrollToContact}
-                className="group bg-primary hover:bg-primary/90 bg-blue-500 text-white h-10 w-40 hover:scale-105 hover:bg-white hover:text-blue-500"
+                className="group bg-primary hover:bg-primary/90 bg-blue-500 text-white h-10 w-40 hover:scale-105 hover:bg-white hover:text-blue-500 hover:border-blue-500 border-2 transition-all flex items-center justify-center"
               >
                 Comenzar Ahora
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -130,7 +131,7 @@ export default function Hero() {
                   className="w-96 h-96 bg-white/10 rounded-3xl shadow-lg flex items-center justify-center 
                   ">
                   <img
-                   src="./src/assets/svg/prueba1.svg"
+                   src={logo}
                    alt="NextLevel Logo"
                    className="w-full h-full bg-white rounded-4xl object-cover"                      
                   />
