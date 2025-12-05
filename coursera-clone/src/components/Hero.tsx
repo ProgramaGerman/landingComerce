@@ -11,7 +11,7 @@ export default function Hero() {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center bg-black/5 bg-cover bg-center overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex items-center bg-white bg-cover bg-center overflow-hidden">
       {/* Efectos de fondo */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 -left-20 w-96 h-96 bg-primary/20 rounded-full blur-3xl" />
@@ -33,7 +33,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="text-5xl lg:text-6xl rounded-2xl p-4 text-white font-bold mb-6 leading-tight"
+              className="text-5xl lg:text-6xl rounded-2xl p-4 text-black font-bold mb-6 leading-tight"
             >
               Domina el Futuro Digital: Programación, Diseño, IA y más
               <br />
@@ -43,7 +43,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="text-xl rounded-2xl text-white mb-8 leading-relaxed p-5 text-justify"
+              className="text-xl rounded-2xl text-black mb-8 leading-relaxed p-5 text-justify"
             >
               Una Plataforma que te ayuda a dominar el futuro digital, promovemos cursos de programación, diseño de aplicaciones,
               ingenieria de prompts, aprendizaje automático, estructuracion de proyectos, entre otros.
@@ -59,7 +59,7 @@ export default function Hero() {
               <Button
                 size="lg"
                 onClick={scrollToContact}
-                className="group bg-primary hover:bg-primary/90 bg-blue-500 text-white h-15 w-50 hover:scale-105 hover:bg-white hover:text-blue-500"
+                className="group bg-primary hover:bg-primary/90 bg-blue-500 text-white h-10 w-40 hover:scale-105 hover:bg-white hover:text-blue-500"
               >
                 Comenzar Ahora
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -74,8 +74,8 @@ export default function Hero() {
               className="mt-12 grid grid-cols-3 gap-6"
             >
               <div className="flex flex-col items-center justify-center">
-                <div className="text-3xl font-bold text-primary">24/7</div>
-                <div className="text-sm text-white/60">Soporte</div>
+                <div className="text-5xl font-bold text-black">24/7</div>
+                <div className="text-3x1 font-bold text-black">Soporte</div>
               </div>
             </motion.div>
           </motion.div>
