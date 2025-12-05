@@ -18,6 +18,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-center h-16">
           <nav className="hidden lg:flex justify-evenly gap-8">
+            <h1 className="w-100 h-full flex items-center justify-center font-bold text-3xl text-blue-500">NextLevel Academy</h1>
             <button
               onClick={() => scrollToSection("hero")}
               className="text-white/90 hover:text-primary font-medium transition-colors hover:text-blue-500"
