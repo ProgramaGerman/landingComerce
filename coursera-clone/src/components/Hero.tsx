@@ -43,7 +43,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="text-xl rounded-2xl text-white mb-8 leading-relaxed p-5 "
+              className="text-xl rounded-2xl text-white mb-8 leading-relaxed p-5 text-justify"
             >
               Una Plataforma que te ayuda a dominar el futuro digital, promovemos cursos de programación, diseño de aplicaciones,
               ingenieria de prompts, aprendizaje automático, estructuracion de proyectos, entre otros.
