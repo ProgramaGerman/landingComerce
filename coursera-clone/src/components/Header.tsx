@@ -14,43 +14,43 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky justify-center items-center  top-0 z-50 bg-dark/95 backdrop-blur-sm border-primary/20 shadow-lg">
+    <header className="sticky justify-center items-center  top-0 z-50 bg-black backdrop-blur-sm border-primary/20 shadow-lg">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-center h-16">
           <nav className="hidden lg:flex justify-evenly gap-8">
             <button
               onClick={() => scrollToSection("hero")}
-              className="text-white/90 hover:text-primary font-medium transition-colors"
+              className="text-white/90 hover:text-primary font-medium transition-colors hover:text-blue-500"
             >
               Inicio
             </button>
             <button
               onClick={() => scrollToSection("features")}
-              className="text-white/90 hover:text-primary font-medium transition-colors"
+              className="text-white/90 hover:text-primary font-medium transition- hover:text-blue-500"
             >
               Características
             </button>
             <button
               onClick={() => scrollToSection("trust")}
-              className="text-white/90 hover:text-primary font-medium transition-colors"
+              className="text-white/90 hover:text-primary font-medium transition- hover:text-blue-500"
             >
               Confiabilidad
             </button>
             <button
               onClick={() => scrollToSection("plans")}
-              className="text-white/90 hover:text-primary font-medium transition-colors"
+              className="text-white/90 hover:text-primary font-medium transition- hover:text-blue-500"
             >
               Planes de Servicios
             </button>
             <button
               onClick={() => scrollToSection("about")}
-              className="text-white/90 hover:text-primary font-medium transition-colors"
+              className="text-white/90 hover:text-primary font-medium transition- hover:text-blue-500"
             >
               Nosotros
             </button>
             <button
               onClick={() => scrollToSection("contact")}
-              className="text-white/90 hover:text-primary font-medium transition-colors"
+              className="text-white/90 hover:text-primary font-medium transition- hover:text-blue-500"
             >
               Contacto
             </button>
@@ -58,7 +58,7 @@ export default function Header() {
           </nav>
 
           <button
-            className="lg:hidden p-2 hover:bg-white/10 rounded-lg transition-colors"
+            className="lg:hidden p-2 hover:bg-white/10 rounded-lg transition- hover:text-blue-500"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? (
