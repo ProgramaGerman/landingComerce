@@ -39,7 +39,7 @@ export default function Trust() {
 
     return (
         <section className="py-20 bg-white" id="trust">
-            <div className="max-w-7xl mx-auto px-4">
+            <div className="max-w-7xl mx-auto">
                 {/* Estadísticas */}
                 <motion.div
                     ref={statsRef}
@@ -48,11 +48,11 @@ export default function Trust() {
                     transition={{ duration: 0.6 }}
                     className="mb-20"
                 >
-                    <div className="text-center mb-12">
-                        <h2 className="text-4xl font-bold text-black mb-4">
+                    <div className="text-center mb-12  bg-black/90 w-full h-50 flex flex-col justify-center items-center p-8 shadow-lg">
+                        <h2 className="text-4xl font-bold text-white mb-4">
                             Confianza en nuestros Sistemas de Cursos a nivel Nacional y hasta Internacional
                         </h2>
-                        <p className="text-lg text-black">
+                        <p className="text-lg text-white max-w-2xl mx-auto">
                             Universidades, Empresas y Centros Educativos nos apoyan con las promociones de los
                             cursos propuestos.
                         </p>
