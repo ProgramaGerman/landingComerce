@@ -3,6 +3,8 @@ import Hero from "./components/Hero";
 import Features from "./components/Features";
 import Trust from "./components/Trust";
 import ShopCTA from "./components/ShopCTA";
+import Plans from "./components/plans";
+import About from "./components/about";
 import ContactForm from "./components/ContactForm";
 import Footer from "./components/Footer";
 
@@ -15,12 +17,18 @@ function App() {
         <div id="features">
           <Features />
         </div>
+        <div id="plans">
+          <Plans />
+        </div>
         <div id="trust">
           <Trust />
-        </div>
+        </div>                
         <ShopCTA />
         <div id="contact">
           <ContactForm />
+        </div>
+        <div id="about">
+          <About />
         </div>
       </main>
       <Footer />
