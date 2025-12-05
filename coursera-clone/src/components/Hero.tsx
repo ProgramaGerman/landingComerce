@@ -59,21 +59,10 @@ export default function Hero() {
               <Button
                 size="lg"
                 onClick={scrollToContact}
-                className="group bg-primary hover:bg-primary/90"
+                className="group bg-primary hover:bg-primary/90 bg-blue-500 text-white h-15 w-50 hover:scale-105 hover:bg-white hover:text-blue-500"
               >
                 Comenzar Ahora
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                onClick={() => {
-                  const element = document.getElementById("features");
-                  if (element) element.scrollIntoView({ behavior: "smooth" });
-                }}
-                className="border-white/30 text-white hover:bg-white/10"
-              >
-                Conocer Más
               </Button>
             </motion.div>
 
@@ -96,7 +85,7 @@ export default function Hero() {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="relative hidden lg:block"
+            className=""
           >
 
 
@@ -128,7 +117,7 @@ export default function Hero() {
               />
 
               {/* Elemento central */}
-              <div className="absolute inset-0 flex items-center justify-center">
+              <div className="flex items-center justify-center w-full h-full">
                 <motion.div
                   animate={{
                     scale: [1, 1.05, 1],
@@ -138,18 +127,13 @@ export default function Hero() {
                     repeat: Infinity,
                     ease: "easeInOut"
                   }}
-                  className="w-96 h-96 rounded-2xl bg-white backdrop-blur-sm border border-primary/30 shadow-2xl flex items-center justify-center"
-                >
-                  <div className="flex flex-col items-center justify-center">
-                    <img
-                      src="/src/assets/svg/prueba.svg"
-                      alt="NextLevel Logo"
-                      className="w-240 h-240 object-contain"
-                    />
-                    <div className="flex items-center justify-center ">
-                      <strong className="text-primary text-4xl">NextLevelAcademy</strong>
-                    </div>
-                  </div>
+                  className="w-96 h-96 bg-white/10 rounded-3xl shadow-lg flex items-center justify-center 
+                  ">
+                  <img
+                   src="/src/assets/svg/prueba1.svg"
+                   alt="NextLevel Logo"
+                   className="w-full h-full bg-white rounded-4xl object-contain"                      
+                  />
                 </motion.div>
               </div>
             </div>

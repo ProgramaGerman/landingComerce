@@ -14,7 +14,7 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky justify-center items-center  top-0 z-50 bg-dark/95 backdrop-blur-sm border-b border-primary/20 shadow-lg">
+    <header className="sticky justify-center items-center  top-0 z-50 bg-dark/95 backdrop-blur-sm border-primary/20 shadow-lg">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-center h-16">
           <nav className="hidden lg:flex justify-evenly gap-8">
@@ -37,11 +37,24 @@ export default function Header() {
               Confiabilidad
             </button>
             <button
+              onClick={() => scrollToSection("plans")}
+              className="text-white/90 hover:text-primary font-medium transition-colors"
+            >
+              Planes de Servicios
+            </button>
+            <button
+              onClick={() => scrollToSection("about")}
+              className="text-white/90 hover:text-primary font-medium transition-colors"
+            >
+              Nosotros
+            </button>
+            <button
               onClick={() => scrollToSection("contact")}
               className="text-white/90 hover:text-primary font-medium transition-colors"
             >
               Contacto
             </button>
+            
           </nav>
 
           <button
