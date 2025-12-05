@@ -1,3 +1,4 @@
+import React from "react";
 import { motion } from "framer-motion";
 import { useScrollReveal } from "../hooks/useScrollReveal";
 import { Mail, User, MessageSquare, Send } from "lucide-react";
@@ -70,7 +71,7 @@ export default function ContactForm() {
                     </div>
 
                     <div className="max-w-2xl mx-auto">
-                        <div className="bg-card rounded-2xl border border-border p-8 shadow-lg">
+                        <div className="bg-card rounded-2xl p-8 shadow-lg">
                             <form onSubmit={handleSubmit} className="space-y-6">
                                 {/* Nombre */}
                                 <div>
@@ -78,7 +79,7 @@ export default function ContactForm() {
                                         Nombre Completo
                                     </label>
                                     <div className="relative">
-                                        <User className="absolute left-3 top-1/2 -translate-y-1 w-4 h-4 text-muted-foreground pointer-events-none" />
+                                        <User className="absolute left-3 top-1/2 -translate-y-1 w-4 h-4 text-muted-foreground pointer-events-none text-black" />
                                         <Input
                                             id="name"
                                             name="name"
@@ -86,7 +87,7 @@ export default function ContactForm() {
                                             value={formData.name}
                                             onChange={handleChange}
                                             placeholder="Tu nombre"
-                                            className={`pl-10 ${errors.name ? "border-destructive" : ""}`}
+                                            className={`pl-10 ${errors.name ? "border-destructive" : ""}border-none bg-white/30 focus:bg-white/90`}
                                         />
                                     </div>
                                     {errors.name && (
@@ -100,7 +101,7 @@ export default function ContactForm() {
                                         Email
                                     </label>
                                     <div className="relative">
-                                        <Mail className="absolute left-3 top-1/2 -translate-y-1 w-4 h-4 text-muted-foreground pointer-events-none" />
+                                        <Mail className="absolute left-3 top-1/2 -translate-y-1 w-4 h-4 text-muted-foreground pointer-events-none text-black" />
                                         <Input
                                             id="email"
                                             name="email"
@@ -108,7 +109,7 @@ export default function ContactForm() {
                                             value={formData.email}
                                             onChange={handleChange}
                                             placeholder="tu@email.com"
-                                            className={`pl-10 ${errors.email ? "border-destructive" : ""}`}
+                                            className={`pl-10 ${errors.email ? "border-destructive" : ""}border-none bg-white/30 focus:bg-white/90`}
                                         />
                                     </div>
                                     {errors.email && (
@@ -122,7 +123,7 @@ export default function ContactForm() {
                                         Mensaje
                                     </label>
                                     <div className="relative">
-                                        <MessageSquare className="absolute left-3 top-4 w-4 h-4 text-muted-foreground pointer-events-none" />
+                                        <MessageSquare className="absolute left-3 top-4 w-4 h-4 text-muted-foreground pointer-events-none text-black" />
                                         <textarea
                                             id="message"
                                             name="message"
@@ -130,8 +131,8 @@ export default function ContactForm() {
                                             onChange={handleChange}
                                             placeholder="Cuéntanos cómo podemos ayudarte..."
                                             rows={5}
-                                            className={`w-full pl-10 pr-3 py-3 rounded-md border bg-transparent text-base shadow-sm transition-colors placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring ${errors.message ? "border-destructive" : "border-input"
-                                                }`}
+                                            className={`w-full pl-10 pr-3 py-3 rounded-md bg-transparent text-base shadow-sm transition-colors placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring ${errors.message ? "border-destructive" : "border-input"
+                                                }border-none bg-white/30 focus:bg-white/90`}
                                         />
                                     </div>
                                     {errors.message && (
@@ -140,7 +141,7 @@ export default function ContactForm() {
                                 </div>
 
                                 {/* Botón de envío */}
-                                <Button type="submit" size="lg" className="w-full group">
+                                <Button type="submit" size="lg" className="w-full group text-black bg-blue-500 hover:bg-white hover:text-blue-500 transition-colors">
                                     Enviar Mensaje
                                     <Send className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                                 </Button>
