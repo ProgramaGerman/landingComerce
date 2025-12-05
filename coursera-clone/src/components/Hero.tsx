@@ -43,7 +43,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="text-xl rounded-2xl text-white mb-8 leading-relaxed"
+              className="text-xl rounded-2xl text-white mb-8 leading-relaxed p-5 "
             >
               Una Plataforma que te ayuda a dominar el futuro digital, promovemos cursos de programación, diseño de aplicaciones,
               ingenieria de prompts, aprendizaje automático, estructuracion de proyectos, entre otros.
@@ -132,7 +132,7 @@ export default function Hero() {
                   <img
                    src="/src/assets/svg/prueba1.svg"
                    alt="NextLevel Logo"
-                   className="w-full h-full bg-white rounded-4xl object-contain"                      
+                   className="w-full h-full bg-white rounded-4xl object-cover"                      
                   />
                 </motion.div>
               </div>
