@@ -52,7 +52,7 @@ export default function ContactForm() {
     };
 
     return (
-        <section className="py-20 bg-muted/30">
+        <section className="py-20 bg-white">
             <div className="max-w-7xl mx-auto px-4">
                 <motion.div
                     ref={elementRef}
@@ -61,10 +61,10 @@ export default function ContactForm() {
                     transition={{ duration: 0.6 }}
                 >
                     <div className="text-center mb-12">
-                        <h2 className="text-4xl font-bold text-foreground mb-4">
+                        <h2 className="text-4xl font-bold text-black mb-4">
                             Contáctanos
                         </h2>
-                        <p className="text-lg text-white max-w-2xl mx-auto">
+                        <p className="text-lg text-black max-w-2xl mx-auto">
                             ¿Tienes alguna pregunta? Estamos aquí para ayudarte.
                             Envíanos un mensaje y te responderemos lo antes posible.
                         </p>
@@ -87,7 +87,7 @@ export default function ContactForm() {
                                             value={formData.name}
                                             onChange={handleChange}
                                             placeholder="Tu nombre"
-                                            className={`pl-10 ${errors.name ? "border-destructive" : ""}border-none bg-white/30 focus:bg-white/90`}
+                                            className={`pl-10 ${errors.name ? "border-destructive" : ""}border-none bg-white focus:bg-white/90`}
                                         />
                                     </div>
                                     {errors.name && (
@@ -109,7 +109,7 @@ export default function ContactForm() {
                                             value={formData.email}
                                             onChange={handleChange}
                                             placeholder="tu@email.com"
-                                            className={`pl-10 ${errors.email ? "border-destructive" : ""}border-none bg-white/30 focus:bg-white/90`}
+                                            className={`pl-10 ${errors.email ? "border-destructive" : ""}border-none bg-white focus:bg-white/90`}
                                         />
                                     </div>
                                     {errors.email && (
@@ -132,7 +132,7 @@ export default function ContactForm() {
                                             placeholder="Cuéntanos cómo podemos ayudarte..."
                                             rows={5}
                                             className={`w-full pl-10 pr-3 py-3 rounded-md bg-transparent text-base shadow-sm transition-colors placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring ${errors.message ? "border-destructive" : "border-input"
-                                                }border-none bg-white/30 focus:bg-white/90`}
+                                                } bg-white/100 focus:bg-white/90`}
                                         />
                                     </div>
                                     {errors.message && (
@@ -154,7 +154,7 @@ export default function ContactForm() {
                                         <strong className="text-foreground">Email:</strong> contacto@nextlevel.com
                                     </div>
                                     <div>
-                                        <strong className="text-foreground">Teléfono:</strong> +58 041x-xxx-xxx
+                                        <strong className="text-foreground">Teléfono:</strong> +58 0412-1234567
                                     </div>
                                 </div>
                             </div>
