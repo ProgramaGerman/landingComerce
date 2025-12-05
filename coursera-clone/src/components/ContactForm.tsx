@@ -87,7 +87,7 @@ export default function ContactForm() {
                                             value={formData.name}
                                             onChange={handleChange}
                                             placeholder="Tu nombre"
-                                            className={`pl-10 ${errors.name ? "border-destructive" : ""}border-none bg-white focus:bg-white/90`}
+                                            className={`pl-10 ${errors.name ? "border-destructive" : ""}border-none bg-white focus:bg-black/90`}
                                         />
                                     </div>
                                     {errors.name && (
@@ -109,7 +109,7 @@ export default function ContactForm() {
                                             value={formData.email}
                                             onChange={handleChange}
                                             placeholder="tu@email.com"
-                                            className={`pl-10 ${errors.email ? "border-destructive" : ""}border-none bg-white focus:bg-white/90`}
+                                            className={`pl-10 ${errors.email ? "border-destructive" : ""}border-none bg-white focus:bg-black/90`}
                                         />
                                     </div>
                                     {errors.email && (
@@ -132,7 +132,7 @@ export default function ContactForm() {
                                             placeholder="Cuéntanos cómo podemos ayudarte..."
                                             rows={5}
                                             className={`w-full pl-10 pr-3 py-3 rounded-md bg-transparent text-base shadow-sm transition-colors placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring ${errors.message ? "border-destructive" : "border-input"
-                                                } bg-white/100 focus:bg-white/90`}
+                                                } bg-white/100 focus:bg-black/90`}
                                         />
                                     </div>
                                     {errors.message && (
