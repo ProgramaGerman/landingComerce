@@ -15,16 +15,16 @@ export default function ShopCTA() {
     };
 
     return (
-        <section className="py-20 bg-gradient-to-br from-primary/5 to-secondary/20">
+        <section className="py-20 bg-gradient-to-br from-primary/5 to-secondary/20 bg-white">
             <div className="max-w-7xl mx-auto px-4">
                 <motion.div
                     ref={elementRef}
                     initial={{ opacity: 0, scale: 0.95 }}
                     animate={isVisible ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }}
                     transition={{ duration: 0.6 }}
-                    className="bg-card rounded-2xl border border-border overflow-hidden shadow-xl"
+                    className="bg-card rounded-2xl border border-border overflow-hidden shadow-xl bg-black/90"
                 >
-                    <div className="grid lg:grid-cols-2 gap-8 items-center">
+                    <div className="grid lg:grid-cols-2 gap-8 items-center text-blue-500">
                         {/* Contenido */}
                         <div className="p-8 lg:p-12">
                             <motion.div
@@ -32,7 +32,7 @@ export default function ShopCTA() {
                                 animate={isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
                                 transition={{ duration: 0.6, delay: 0.2 }}
                             >
-                                <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full mb-6">
+                                <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full mb-6 text-blue-500">
                                     <GraduationCap className="w-4 h-4" />
                                     <span className="text-sm font-semibold">Catálogo de Cursos</span>
                                 </div>
@@ -41,7 +41,7 @@ export default function ShopCTA() {
                                     Explora Nuestros Cursos
                                 </h2>
 
-                                <p className="text-lg text-muted-foreground mb-8">
+                                <p className="text-lg text-muted-foreground mb-8 text-white">
                                     Descubre nuestra amplia selección de cursos especializados en programación,
                                     diseño, IA y tecnologías emergentes para impulsar tu carrera profesional.
                                 </p>
@@ -86,7 +86,7 @@ export default function ShopCTA() {
                             className="relative h-full min-h-[400px] bg-gradient-primary"
                         >
                             <div className="absolute inset-0 flex items-center justify-center">
-                                <GraduationCap className="w-32 h-32 text-white/20" />
+                                <GraduationCap className="w-32 h-32 text-blue/500" />
                             </div>
                             <div className="absolute inset-0 bg-gradient-to-br from-transparent to-dark/20" />
                         </motion.div>
