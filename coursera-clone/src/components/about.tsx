@@ -85,7 +85,7 @@ const TeamCard: React.FC<{ member: Member; index: number }> = ({ member, index }
         initial={{ opacity: 0, scale: 0.9 }}
         animate={isVisible ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
         transition={{ duration: 0.4, delay: index * 0.15 }}
-        className="bg-card p-6 rounded-xl border border-border flex flex-col items-center text-center hover:shadow-xl transition-shadow h-full"
+        className="bg-card p-6 rounded-xl border border-border flex flex-col items-center text-center hover:shadow-xl transition-shadow h-full bg-blue-500/10 border  border-black/10 shadow-sm"
       >
         <div className="relative mb-4 w-32 h-32 rounded-full overflow-hidden border-4 border-primary/50">
           <img
@@ -97,7 +97,7 @@ const TeamCard: React.FC<{ member: Member; index: number }> = ({ member, index }
             }}
           />
         </div>
-        <h3 className="text-xl font-bold text-foreground mb-1">{member.name}</h3>
+        <h3 className="text-xl font-bold text-foreground mb-1 text-black">{member.name}</h3>
         <p className="text-primary font-medium mb-3">{member.role}</p>
         
         <div className="mt-auto pt-4 border-t border-border w-full">
@@ -120,13 +120,13 @@ const TeamCard: React.FC<{ member: Member; index: number }> = ({ member, index }
 
 function SobreNosotros() {
     return (
-      <section id="about" className="py-20 bg-dark text-white">
-        <div className="max-w-7xl mx-auto px-4">
+      <section id="about" className="py-20 bg-white text-blue-500">
+        <div className="max-w-7xl mx-auto px-4 bg-white">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-primary mb-4">
               Conoce a Nuestro Equipo
             </h2>
-            <p className="text-lg text-white/70 max-w-3xl mx-auto">
+            <p className="text-lg text-black max-w-3xl mx-auto">
               Somos 6 programadores apasionados, cada uno con un área de especialización clave, dedicados a construir la mejor plataforma de aprendizaje.
             </p>
           </div>
