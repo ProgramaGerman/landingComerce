@@ -130,7 +130,7 @@ export default function Hero() {
                   className="w-96 h-96 bg-white/10 rounded-3xl shadow-lg flex items-center justify-center 
                   ">
                   <img
-                   src="/src/assets/svg/prueba1.svg"
+                   src="/src/assets/svg/prueba1.png"
                    alt="NextLevel Logo"
                    className="w-full h-full bg-white rounded-4xl object-cover"                      
                   />
